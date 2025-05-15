@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preiskalkulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" class="header-link">Internes Dashboard</a> &raquo; Preiskalkulator</h1>
+    </header>
+    <div class="kalkulator-container">
+        <main id="kalkulator-hauptbereich">
+            <h2>1. Kategorie wählen:</h2>
+            <section id="kategorie-kacheln" class="kachel-grid">
+                </section>
+
+            <section id="optionen-bereich" class="hidden">
+                <h2 id="optionen-titel"></h2>
+                <div id="unteroptionen-container">
+                    </div>
+                <div id="menge-container" class="hidden">
+                    <label for="option-menge">Menge:</label>
+                    <input type="number" id="option-menge" value="1" min="1">
+                </div>
+            </section>
+
+            <section id="zusatzleistungen-bereich" class="hidden">
+                <h3>Zusatzleistungen:</h3>
+                <div id="zusatzleistungen-container">
+                    </div>
+            </section>
+             <button id="reset-button" class="hidden">Neue Kalkulation</button>
+        </main>
+
+        <aside id="kalkulator-sidebar">
+            <h2>Basis-Daten & Preis</h2>
+            <div class="sidebar-item">
+                <label for="stundensatz">Stundensatz (€):</label>
+                <input type="number" id="stundensatz" value="60" step="0.01">
+            </div>
+            <div class="sidebar-item">
+                <label for="projektrabatt">Projektrabatt (%):</label>
+                <input type="number" id="projektrabatt" value="0" min="0" max="100">
+            </div>
+            <hr>
+            <div class="sidebar-item preis-anzeige">
+                <h3>Geschätzter Preis:</h3>
+                <p id="gesamtpreis">0.00 €</p>
+                <div id="preis-details">
+                    </div>
+            </div>
+        </aside>
+    </div>
+    <footer>
+        <p>&copy; 2025 Dein Name / Deine Firma</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

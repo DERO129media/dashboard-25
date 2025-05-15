@@ -1,0 +1,52 @@
+{
+  "basisDatenDefaults": {
+    "stundensatz": 60,
+    "projektrabatt": 0
+  },
+  "kategorien": [
+    {
+      "id": "flyer",
+      "name": "Flyer",
+      "beschreibung": "Gestaltung und Druck von Flyern.",
+      "unteroptionenTitel": "Format/Seitenzahl wählen:",
+      "optionen": [
+        { "id": "flyer-4", "name": "4-Seiter", "basisPreis": 50, "einheit": "pro Stück", "berechnungsTyp": "fix", "mengeAktiv": true },
+        { "id": "flyer-6", "name": "6-Seiter", "basisPreis": 70, "einheit": "pro Stück", "berechnungsTyp": "fix", "mengeAktiv": true },
+        { "id": "flyer-dl", "name": "DIN Lang (2-seitig)", "basisPreis": 40, "einheit": "pro Stück", "berechnungsTyp": "fix", "mengeAktiv": true }
+      ],
+      "zusatzleistungen": [
+        { "id": "flyer-design", "name": "Individuelles Design", "basisPreis": 2, "einheit": "Stunden", "berechnungsTyp": "stundenbasiert" },
+        { "id": "flyer-papier-premium", "name": "Premiumpapier", "faktor": 0.15, "einheit": "Aufschlag auf Basispreis", "berechnungsTyp": "faktorBasis", "bezogenAuf": "option" }
+      ]
+    },
+    {
+      "id": "webdesign",
+      "name": "Webdesign",
+      "beschreibung": "Erstellung von Webseiten.",
+      "unteroptionenTitel": "Projekttyp wählen:",
+      "optionen": [
+        { "id": "web-landingpage", "name": "Landing Page", "basisPreis": 500, "berechnungsTyp": "fix" },
+        { "id": "web-klein", "name": "Kleine Webseite (bis 5 Unterseiten)", "basisPreis": 1200, "berechnungsTyp": "fix" },
+        { "id": "web-shop", "name": "Einfacher Online-Shop", "basisPreis": 2500, "berechnungsTyp": "fix" }
+      ],
+      "zusatzleistungen": [
+        { "id": "web-cms", "name": "CMS Integration (WordPress)", "basisPreis": 5, "einheit": "Stunden", "berechnungsTyp": "stundenbasiert" },
+        { "id": "web-seo-basis", "name": "SEO Basispaket", "basisPreis": 250, "berechnungsTyp": "fix" },
+        { "id": "web-wartung", "name": "Wartungsvertrag (monatl.)", "basisPreis": 50, "einheit": "pro Monat", "berechnungsTyp": "fix", "mengeAktiv": true, "mengenLabel": "Monate"}
+      ]
+    },
+    {
+      "id": "logo",
+      "name": "Logo Design",
+      "beschreibung": "Entwicklung eines einzigartigen Logos.",
+      "unteroptionenTitel": "Paket wählen:",
+      "optionen": [
+        { "id": "logo-basic", "name": "Basispaket (2 Entwürfe)", "basisPreis": 300, "berechnungsTyp": "fix" },
+        { "id": "logo-premium", "name": "Premiumpaket (5 Entwürfe + Revisionen)", "basisPreis": 700, "berechnungsTyp": "fix" }
+      ],
+      "zusatzleistungen": [
+        { "id": "logo-brandguide", "name": "Mini Brand Guide", "basisPreis": 150, "berechnungsTyp": "fix" }
+      ]
+    }
+  ]
+}

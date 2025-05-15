@@ -1,0 +1,235 @@
+/* Allgemeine Stile */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.header-link {
+    color: white;
+    text-decoration: none;
+}
+.header-link:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #e9ecef;
+    color: #6c757d;
+    margin-top: 2rem;
+}
+
+main {
+    padding: 1rem 2rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Dashboard Startseite */
+.dashboard-main {
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.dashboard-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.tile {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.tile h2 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+/* Kalkulator Seite */
+.kalkulator-container {
+    display: flex;
+    flex-wrap: wrap; /* Für kleinere Bildschirme */
+    gap: 2rem;
+    padding: 1rem 2rem;
+    max-width: 1400px;
+    margin: 1rem auto;
+}
+
+#kalkulator-hauptbereich {
+    flex: 3; /* Nimmt 3/4 des verfügbaren Platzes ein */
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#kalkulator-sidebar {
+    flex: 1; /* Nimmt 1/4 des verfügbaren Platzes ein */
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    min-width: 280px; /* Mindestbreite für die Sidebar */
+}
+
+#kalkulator-hauptbereich h2, #kalkulator-hauptbereich h3 {
+    color: #0056b3;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+#kalkulator-hauptbereich h2:first-child {
+    margin-top: 0;
+}
+
+
+.kachel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.kategorie-kachel, .options-kachel { /* Basis Kachel Styling */
+    background-color: #e9f5ff;
+    border: 1px solid #bde0ff;
+    padding: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    text-align: center;
+}
+
+.kategorie-kachel:hover, .options-kachel:hover {
+    background-color: #d0eaff;
+    border-color: #9acffa;
+}
+.kategorie-kachel.selected {
+    background-color: #007bff;
+    color: white;
+    border-color: #0056b3;
+}
+
+
+#unteroptionen-container label,
+#zusatzleistungen-container label {
+    display: block;
+    background-color: #f8f9fa;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#unteroptionen-container label:hover,
+#zusatzleistungen-container label:hover {
+    background-color: #e9ecef;
+}
+
+#unteroptionen-container input[type="radio"],
+#zusatzleistungen-container input[type="checkbox"] {
+    margin-right: 0.8rem;
+    vertical-align: middle;
+}
+
+
+#menge-container, .sidebar-item {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#menge-container label, .sidebar-item label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    color: #495057;
+}
+
+input[type="number"], input[type="text"] { /* Basis Input Felder */
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+input[type="number"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    outline: none;
+}
+
+
+.preis-anzeige h3 {
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+#gesamtpreis {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: #e9f5ff;
+    border-radius: 4px;
+    text-align: right;
+}
+
+#reset-button {
+    background-color: #6c757d;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    transition: background-color 0.2s ease;
+}
+#reset-button:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 900px) { /* Wenn Sidebar unter Hauptbereich rutscht */
+    .kalkulator-container {
+        flex-direction: column;
+    }
+    #kalkulator-hauptbereich, #kalkulator-sidebar {
+        flex: 1 1 100%; /* Volle Breite */
+    }
+}
