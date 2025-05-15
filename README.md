@@ -1,3 +1,3 @@
-# dashboard-25
+# Dashboard-25
 
 Hier entsteht mein persönliches Dashboard. Zum Testen.
